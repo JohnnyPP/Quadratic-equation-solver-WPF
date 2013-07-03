@@ -4,7 +4,7 @@
         Title="Quadratic equation solver" Height="350" Width="403" SizeToContent="WidthAndHeight">
     <Grid>
         <StackPanel HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="383">
-            <TextBlock TextWrapping="Wrap" Text="The program solves the quadratic equation of the form ax^2+bx+c=0" />
+            <TextBlock TextWrapping="Wrap" Text="The program solves the quadratic equation of the form ax²+bx+c=0" />
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="175" Margin="10,45,0,0" VerticalAlignment="Top" Width="383" >
             <TextBox 
@@ -19,12 +19,13 @@
                     <ToolTip 
                         Placement="Bottom"
                         StaysOpen="True" 
-                        Content="Example: To solve the equation of the form 2x^2+2x+1=0 &#x0a;enter 2,2,1 in the text box">
+                        Content="Example: To solve the equation of the form 2x²+2x-1=0 &#x0a;enter 2,2,-1 in the text box">
                     </ToolTip>
                 </TextBox.ToolTip>
             </TextBox>
             <Button Content="Calculate" Name="Button_calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_calculate_Click" Width="373"/>
             <Label Content="Results" x:Name="Label_results" Height="129"/>
+            <TextBlock><Span><Run Text="Code"/><Run Typography.Variants="Ordinal" Text="Guru"/></Span></TextBlock>
         </StackPanel>
 
 
