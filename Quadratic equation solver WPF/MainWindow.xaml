@@ -7,7 +7,7 @@
             <TextBlock TextWrapping="Wrap" Text="The program solves the quadratic equation of the form ax^2+bx+c=0" />
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="175" Margin="10,45,0,0" VerticalAlignment="Top" Width="383" >
-            <TextBox Height="24" Name="TextBox_input" Text="Input equation coefficients separated with comma" Margin="0,0,10,0" GotFocus="TextBox_GotFocus"/>
+            <TextBox Height="24" Name="TextBox_input" Text="Input equation coefficients separated with comma" Margin="0,0,10,0" GotFocus="TextBox_GotFocus" KeyDown="OnKeyDownHandler"/>
             <Button Content="Calculate" Name="Button_calculate" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_calculate_Click" Width="373"/>
             <Label Content="Results" x:Name="Label_results" Height="129"/>
         </StackPanel>

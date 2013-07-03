@@ -21,6 +21,9 @@ namespace Quadratic_equation_solver_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        Solver solve = new Solver();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -28,8 +31,6 @@ namespace Quadratic_equation_solver_WPF
 
         private void Button_calculate_Click(object sender, RoutedEventArgs e)
         {
-
-            Solver solve = new Solver();
 
             Label_results.Content = solve.Results(TextBox_input.Text);
             
@@ -39,6 +40,14 @@ namespace Quadratic_equation_solver_WPF
             TextBox tb = (TextBox)sender;               //clears the text box after getting focus
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                Label_results.Content = solve.Results(TextBox_input.Text);
+            }
         }
     }
 }
