@@ -8,10 +8,12 @@ namespace EquationSolver
 {
     public class Solver
     {
+        private double a, b, c, x1, x2, xReal, xImaginary, Discriminant;
+
         public string Results(string InputString)
         {
             string[] SplitString;
-            double a, b, c, Discriminant, x1, x2, xReal, xImaginary;
+            
 
             //InputLength = TextBox_input.Text;
             //IndexOfTheFirstComma = TextBox_input.Text.IndexOf(",").ToString();
@@ -27,39 +29,52 @@ namespace EquationSolver
 
                 if (Discriminant == 0)
                 {
-                    return "The equation has only one root.\n\r" + "Discriminant: "
-                        + Discriminant + "\n\rRoot: " + ((-b - Math.Sqrt(Discriminant)) / (2 * a)).ToString();
+                    return DiscrimantEqualZero();
                 }
 
                 if (Discriminant > 0)
                 {
-                    x1 = (-b - Math.Sqrt(Discriminant)) / (2 * a);
-                    x2 = (-b + Math.Sqrt(Discriminant)) / (2 * a);
-
-                    return "The equation has two roots.\n\r" + "Discriminant: " + Discriminant.ToString()
-                        + "\n\rRoot1: " + x1.ToString() + "\n\r" + "Root2: " + x2.ToString();
-
+                    return DiscriminantGreaterThanZero();
                 }
 
                 if (Discriminant < 0)
                 {
-                    xReal = -b / (2 * a);
-                    xImaginary = (Math.Sqrt(4 * a * c - b * b)) / (2 * a);
-
-                    return "The equation has two complex roots.\n\r" + "Discriminant: "
-                        + Discriminant.ToString()
-                        + "\n\rRoot1: " + xReal.ToString() + " + i" + xImaginary.ToString()
-                        + "\n\rRoot2: " + xReal.ToString() + " - i" + xImaginary.ToString();
-
+                    return DiscriminantLessThanZero();
                 }
 
-                return "Linear equation";
+                return "Quadratic equation return path";
             }
             else
             {
                 return "Linear equation has only one root: " + (-c / b).ToString();
             }
+        }
 
+        private string DiscrimantEqualZero()
+        {
+            return "The equation has only one root.\n\r" + "Discriminant: "
+                        + Discriminant + "\n\rRoot: " + ((-b - Math.Sqrt(Discriminant)) / (2 * a)).ToString();
+        }
+
+        private string DiscriminantGreaterThanZero()
+        {
+            x1 = (-b - Math.Sqrt(Discriminant)) / (2 * a);
+            x2 = (-b + Math.Sqrt(Discriminant)) / (2 * a);
+
+            return "The equation has two roots.\n\r" + "Discriminant: " + Discriminant.ToString()
+                + "\n\rRoot1: " + x1.ToString() + "\n\r" + "Root2: " + x2.ToString();
+
+        }
+
+        private string DiscriminantLessThanZero()
+        {
+            xReal = -b / (2 * a);
+            xImaginary = (Math.Sqrt(4 * a * c - b * b)) / (2 * a);
+
+            return "The equation has two complex roots.\n\r" + "Discriminant: "
+                + Discriminant.ToString()
+                + "\n\rRoot1: " + xReal.ToString() + " + i" + xImaginary.ToString()
+                + "\n\rRoot2: " + xReal.ToString() + " - i" + xImaginary.ToString();
         }
     }
 }
