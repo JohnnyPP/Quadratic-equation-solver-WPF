@@ -4,12 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscriminantEqualZeroLibrary;
+using DiscriminantGreaterThanZeroLibrary;
+using DiscriminantLessThanZeroLibrary;
 
 namespace EquationSolver
 {
     public class Solver
     {
-        private double a, b, c, x1, x2, xReal, xImaginary, Discriminant;
+        private double a, b, c, Discriminant;
+        DiscriminantEqualZero DEZ = new DiscriminantEqualZero();
+        DiscriminantGreaterThanZero DGTZ = new DiscriminantGreaterThanZero();
+        DiscriminantLessThanZero DLTZ = new DiscriminantLessThanZero();
 
         public string Results(string InputString)
         {
@@ -30,7 +36,7 @@ namespace EquationSolver
 
                     if (Discriminant == 0)
                     {
-                        return DiscrimantEqualZero();
+                        return DiscriminantEqualZero();
                     }
 
                     if (Discriminant > 0)
@@ -56,35 +62,21 @@ namespace EquationSolver
                 MessageBox.Show(ex.ToString());
                 return "Error check the input values and format";
             }
-
-            
         }
 
-        private string DiscrimantEqualZero()
+        private string DiscriminantEqualZero()
         {
-            return "The equation has only one root.\n\r" + "Discriminant: "
-                        + Discriminant + "\n\rRoot: " + ((-b - Math.Sqrt(Discriminant)) / (2 * a)).ToString();
+            return DEZ.DiscrEqualZero(a, b, Discriminant);
         }
 
         private string DiscriminantGreaterThanZero()
         {
-            x1 = (-b - Math.Sqrt(Discriminant)) / (2 * a);
-            x2 = (-b + Math.Sqrt(Discriminant)) / (2 * a);
-
-            return "The equation has two roots.\n\r" + "Discriminant: " + Discriminant.ToString()
-                + "\n\rRoot1: " + x1.ToString() + "\n\r" + "Root2: " + x2.ToString();
-
+            return DGTZ.DiscrGreaterThanZero(a,b,Discriminant);
         }
 
         private string DiscriminantLessThanZero()
         {
-            xReal = -b / (2 * a);
-            xImaginary = (Math.Sqrt(4 * a * c - b * b)) / (2 * a);
-
-            return "The equation has two complex roots.\n\r" + "Discriminant: "
-                + Discriminant.ToString()
-                + "\n\rRoot1: " + xReal.ToString() + " + i" + xImaginary.ToString()
-                + "\n\rRoot2: " + xReal.ToString() + " - i" + xImaginary.ToString();
+            return DLTZ.DiscrLessThanZero(a, b, c, Discriminant);
         }
     }
 }
