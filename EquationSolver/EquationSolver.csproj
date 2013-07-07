@@ -63,6 +63,10 @@
       <Project>{d44270aa-76b2-4261-ac60-74037d70dc05}</Project>
       <Name>InterfacesLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LinearEquationLibrary\LinearEquationLibrary.csproj">
+      <Project>{59108d1f-816c-4ed7-9ade-234ea4dfbd07}</Project>
+      <Name>LinearEquationLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

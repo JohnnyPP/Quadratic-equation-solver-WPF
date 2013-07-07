@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D44270AA-76B2-4261-AC60-74037D70DC05}</ProjectGuid>
+    <ProjectGuid>{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InterfacesLibrary</RootNamespace>
-    <AssemblyName>InterfacesLibrary</AssemblyName>
+    <RootNamespace>LinearEquationLibrary</RootNamespace>
+    <AssemblyName>LinearEquationLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,11 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDiscriminantEqualZero.cs" />
-    <Compile Include="IDiscriminantGreaterThanZero.cs" />
-    <Compile Include="IDiscriminantLessThanZero.cs" />
-    <Compile Include="ILinearEquation.cs" />
+    <Compile Include="LinearEquation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterfacesLibrary\InterfacesLibrary.csproj">
+      <Project>{d44270aa-76b2-4261-ac60-74037d70dc05}</Project>
+      <Name>InterfacesLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

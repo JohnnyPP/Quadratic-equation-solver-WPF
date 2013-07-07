@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscriminantLessThanZeroLib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesLibrary", "InterfacesLibrary\InterfacesLibrary.csproj", "{D44270AA-76B2-4261-AC60-74037D70DC05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearEquationLibrary", "LinearEquationLibrary\LinearEquationLibrary.csproj", "{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{D44270AA-76B2-4261-AC60-74037D70DC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D44270AA-76B2-4261-AC60-74037D70DC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D44270AA-76B2-4261-AC60-74037D70DC05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59108D1F-816C-4ED7-9ADE-234EA4DFBD07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

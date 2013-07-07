@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using DiscriminantEqualZeroLibrary;
 using DiscriminantGreaterThanZeroLibrary;
 using DiscriminantLessThanZeroLibrary;
+using LinearEquationLibrary;
 
 namespace EquationSolver
 {
@@ -17,12 +18,15 @@ namespace EquationSolver
         public IDiscriminantEqualZero DEZ { get; set; }
         public IDiscriminantGreaterThanZero DGTZ { get; set; }
         public IDiscriminantLessThanZero DLTZ { get; set; }
+        public ILinearEquation LE { get; set; }
+        
 
         public Solver()
         {  
             DEZ = new DiscriminantEqualZero();
             DGTZ = new DiscriminantGreaterThanZero();
             DLTZ = new DiscriminantLessThanZero();
+            LE = new LinearEquation();
         }
 
 
@@ -62,7 +66,7 @@ namespace EquationSolver
                 }
                 else
                 {
-                    return "Linear equation has only one root: " + (-c / b).ToString();
+                    return LinearEquation();
                 }
             }
             catch (Exception ex)
@@ -86,6 +90,11 @@ namespace EquationSolver
         private string DiscriminantLessThanZero()
         {
             return DLTZ.DiscrLessThanZero(a, b, c, Discriminant);
+        }
+
+        private string LinearEquation()
+        {
+            return LE.LinEquation(b, c);
         }
     }
 }
