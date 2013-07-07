@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiscriminantGreaterThanZeroLibrary
 {
-    public class DiscriminantGreaterThanZero
+    public class DiscriminantGreaterThanZero : DiscriminantGreaterThanZeroLibrary.IDiscriminantGreaterThanZero
     {
         public string DiscrGreaterThanZero(double a, double b, double Discriminant)
         {

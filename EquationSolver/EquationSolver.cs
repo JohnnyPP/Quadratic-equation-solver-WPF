@@ -13,9 +13,10 @@ namespace EquationSolver
     public class Solver
     {
         private double a, b, c, Discriminant;
-        DiscriminantEqualZero DEZ;
-        DiscriminantGreaterThanZero DGTZ;
-        DiscriminantLessThanZero DLTZ;
+
+        public IDiscriminantEqualZero DEZ { get; set; }
+        public IDiscriminantGreaterThanZero DGTZ { get; set; }
+        public IDiscriminantLessThanZero DLTZ { get; set; }
 
         public Solver()
         {  
@@ -23,7 +24,7 @@ namespace EquationSolver
             DGTZ = new DiscriminantGreaterThanZero();
             DLTZ = new DiscriminantLessThanZero();
         }
-        
+
 
         public string Results(string InputString)
         {

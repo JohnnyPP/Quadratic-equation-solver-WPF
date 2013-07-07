@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscriminantGreaterThanZero
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscriminantLessThanZeroLibrary", "DiscriminantLessThanZeroLibrary\DiscriminantLessThanZeroLibrary.csproj", "{835DA441-E161-4ACB-81F8-FD739787FBE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesLibrary", "InterfacesLibrary\InterfacesLibrary.csproj", "{D44270AA-76B2-4261-AC60-74037D70DC05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{835DA441-E161-4ACB-81F8-FD739787FBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835DA441-E161-4ACB-81F8-FD739787FBE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{835DA441-E161-4ACB-81F8-FD739787FBE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44270AA-76B2-4261-AC60-74037D70DC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44270AA-76B2-4261-AC60-74037D70DC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44270AA-76B2-4261-AC60-74037D70DC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44270AA-76B2-4261-AC60-74037D70DC05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
