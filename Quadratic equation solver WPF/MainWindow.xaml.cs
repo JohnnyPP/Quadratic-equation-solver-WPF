@@ -32,8 +32,7 @@ namespace Quadratic_equation_solver_WPF
         private void Button_calculate_Click(object sender, RoutedEventArgs e)
         {
 
-            Label_results.Content = solve.Results(TextBox_input.Text);
-            
+            Label_results.Content = solve.Results(TextBox_input.Text);     
         }
         public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {

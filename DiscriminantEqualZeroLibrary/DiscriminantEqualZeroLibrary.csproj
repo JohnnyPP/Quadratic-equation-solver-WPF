@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiscriminantEqualZero.cs" />
+    <Compile Include="DiscriminantEqualZeroLibraryCapitalLetters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

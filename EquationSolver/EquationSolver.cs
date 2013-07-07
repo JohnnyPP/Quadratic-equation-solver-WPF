@@ -22,11 +22,11 @@ namespace EquationSolver
         
 
         public Solver()
-        {  
-            DEZ = new DiscriminantEqualZero();
-            DGTZ = new DiscriminantGreaterThanZero();
-            DLTZ = new DiscriminantLessThanZero();
-            LE = new LinearEquation();
+        {
+            DEZ = new DiscriminantEqualZeroLibraryCapitalLetters();
+            DGTZ = new DiscriminantGreaterThanZeroCapitalLetters();
+            DLTZ = new DiscriminantLessThanZeroCapitalLetters();
+            LE = new LinearEquationCapitalLetters();
         }
 
 
@@ -55,6 +55,7 @@ namespace EquationSolver
                     if (Discriminant > 0)
                     {
                         return DiscriminantGreaterThanZero();
+                       
                     }
 
                     if (Discriminant < 0)
@@ -84,7 +85,7 @@ namespace EquationSolver
 
         private string DiscriminantGreaterThanZero()
         {
-            return DGTZ.DiscrGreaterThanZero(a,b,Discriminant);
+            return DGTZ.DiscrGreaterThanZero(a, b, Discriminant);
         }
 
         private string DiscriminantLessThanZero()
